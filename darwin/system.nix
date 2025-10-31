@@ -48,6 +48,11 @@
                 AppleShowAllFiles = true;
                 NSWindowShouldDragOnGesture = true; # Allow dragging windows by clicking anywhere
             };
+            screencapture = {
+                include-date = false;
+                # target = "clipboard";  # Save screenshots to clipboard
+            };
+            trackpad.Clicking = true;
         };
     };
 }
