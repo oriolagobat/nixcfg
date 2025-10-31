@@ -27,7 +27,7 @@
                 modules = [
                     ./hosts/taln/configuration.nix
                 ];
-                specialArgs = { inherit user; hostName = "taln";};
+                specialArgs = { inherit home-manager user; hostName = "taln";};
             };
         };
     };
