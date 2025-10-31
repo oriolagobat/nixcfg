@@ -6,5 +6,6 @@
         ./nixpkgs.nix
         ./security.nix
         ./system.nix
+        ./users.nix
     ];
 }

@@ -11,3 +11,4 @@ sudo darwin-rebuild switch
 - [ ] Check on direnv
 - [ ] Check certificate management (security.pki)
 - [ ] Create justfile
+- [ ] Document that it the code should live on /etc/nix-darwin

@@ -18,7 +18,7 @@
         home-manager,
     }: 
     let 
-        user = "oriolgobat";
+        user = "oriolagobat";
     in
     {
         darwinConfigurations = {

@@ -3,6 +3,6 @@
     networking = {
         computerName = hostName;
         hostName = hostName;
-        localHostName = "Oriols-MacBook-Pro";
+        localHostName = hostName;
     };
 }
