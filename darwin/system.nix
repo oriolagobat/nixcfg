@@ -33,6 +33,10 @@
                 DisableConsoleAccess = true;
             };
             magicmouse.MouseButtonMode = "TwoButton";
+            menuExtraClock = {
+                Show24Hour = true;
+                ShowAMPM = false;
+            };
         };
     };
 }
