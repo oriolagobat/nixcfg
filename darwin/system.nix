@@ -37,6 +37,17 @@
                 Show24Hour = true;
                 ShowAMPM = false;
             };
+            NSGlobalDomain = {
+                "com.apple.mouse.tapBehavior" = 1; # Enable tap to click
+                "com.apple.springing.delay" = 0.5;
+                "com.apple.springing.enabled" = true;
+                "com.apple.swipescrolldirection" = false;
+                AppleInterfaceStyle = "Dark";
+                ApplePressAndHoldEnabled = false; # Disable press-and-hold for keys in favor of key repeat
+                AppleShowAllExtensions = true;
+                AppleShowAllFiles = true;
+                NSWindowShouldDragOnGesture = true; # Allow dragging windows by clicking anywhere
+            };
         };
     };
 }
