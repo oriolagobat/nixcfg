@@ -13,13 +13,26 @@
                 autohide = true;
                 enable-spring-load-actions-on-all-items = true;
                 magnification = true;
-                # minimize-to-application = true;
+                # minimize-to-application = true;  # This makes the minimized application appear in the app itself.
                 persistent-apps = [ ];
                 persistent-others = [
                     "/Users/${user}/Downloads"
                 ];
                 show-recents = false;
             };
+            finder = {
+                AppleShowAllExtensions = true;
+                AppleShowAllFiles = true;
+                FXDefaultSearchScope = "SCcf"; # Search the current folder by default
+                FXEnableExtensionChangeWarning = false;
+                NewWindowTarget = "Home";
+                ShowPathbar = true;
+            };
+            loginwindow = {
+                GuestEnabled = false;
+                DisableConsoleAccess = true;
+            };
+            magicmouse.MouseButtonMode = "TwoButton";
         };
     };
 }
