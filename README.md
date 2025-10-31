@@ -12,5 +12,4 @@ sudo darwin-rebuild switch
 - [ ] Check certificate management (security.pki)
 - [ ] Create justfile
 - [ ] Document that it the code should live on /etc/nix-darwin
-- [ ] Check if bat can be enabled from zsh 
-- [ ] Check if lsd can be enabled from zsh 
+- [ ] Install neovim properly

@@ -9,6 +9,8 @@
 
         home-manager.url = "github:nix-community/home-manager/";
         home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+        nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     };
 
     outputs = inputs@{
@@ -16,6 +18,7 @@
         nixpkgs,
         nix-darwin,
         home-manager,
+        nix-homebrew,
     }: 
     let 
         user = "oriolagobat";
@@ -26,8 +29,9 @@
                 system = "x86_64-darwin";
                 modules = [
                     ./hosts/taln/configuration.nix
+                    ./homebrew
                 ];
-                specialArgs = { inherit home-manager user; hostName = "taln";};
+                specialArgs = { inherit home-manager nix-homebrew user; hostName = "taln";};
             };
         };
     };

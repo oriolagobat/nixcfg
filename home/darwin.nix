@@ -1,4 +1,4 @@
-{ config, user, home-manager,  ... }:
+{ user, home-manager,  ... }:
 {
     imports = [
         home-manager.darwinModules.home-manager 

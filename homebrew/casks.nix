@@ -1,0 +1,11 @@
+[
+    "docker-desktop"
+    "microsoft-word"
+    "microsoft-excel"
+    "raycast"
+    "signal"
+    "spotify"
+    "tuta-mail"
+    "visual-studio-code"
+    "warp"
+]
