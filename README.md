@@ -10,6 +10,7 @@ sudo darwin-rebuild switch
 - [ ] Document
 - [ ] Check on direnv
 - [ ] Check certificate management (security.pki)
-- [ ] Create justfile
+- [ ] Create justfile properly
 - [ ] Document that it the code should live on /etc/nix-darwin
 - [ ] Install neovim properly
+- [ ] Configure zsh
