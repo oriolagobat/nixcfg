@@ -5,6 +5,7 @@ _: {
         ./lsd.nix
         ./ripgrep-all.nix
         ./zoxide.nix
+        ./zsh.nix
     ];
 
     home.stateVersion = "25.05";

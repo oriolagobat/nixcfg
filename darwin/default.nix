@@ -1,6 +1,7 @@
 {user, hostName, ...}:
 {
     imports = [
+        ./environment.nix
         ./networking.nix
         ./nix.nix
         ./nixpkgs.nix
