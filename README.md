@@ -1,19 +1,29 @@
-# Commands
+# Nix-Darwin Configuration
 
-sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#HOST
-sudo darwin-rebuild switch
+This repository contains my Nix-Darwin configuration for managing macOS settings and packages using Nix.
 
-# TO DO in this configuration:
+## Code Location
 
-- [ ] Configure system with current defaults
-- [ ] Set up homebrew
+The code should be placed in `/etc/nix-darwin`.
+
+## Commands
+
+### First time running this configuration
+
+```bash
+sudo nix run nix-darwin/master#darwin-rebuild -- switch --flake .#HOST  # Replace HOST with your machine's hostname
+```
+
+### Subsequent updates
+
+```bash
+sudo darwin-rebuild switch # Or use the switch alias defined in zsh.nix
+```
+
+## TODOs
+
 - [ ] Document
 - [ ] Check on direnv
 - [ ] Check certificate management (security.pki)
-- [ ] Create justfile properly
-- [ ] Document that it the code should live on /etc/nix-darwin
 - [ ] Install neovim properly
-- [ ] Configure git
 - [ ] Configure git signing
-- [X] Configure zsh
-- [X] Add nix environment.pathsToLink = [ "/share/zsh" ]
