@@ -24,7 +24,6 @@
             gspo = "git stash pop";
             gch = "git checkout";
             gpf = "git push --force";
-            cdh = "${lib.getExe pkgs.zoxide} ~"; # Go home
             ls = "${lib.getExe pkgs.lsd}";
             cat = "${lib.getExe pkgs.bat}";
             switch = "sudo darwin-rebuild switch --flake /etc/nix-darwin";

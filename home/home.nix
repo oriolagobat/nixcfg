@@ -5,6 +5,7 @@ _: {
         ./difftastic.nix
         ./git.nix
         ./lsd.nix
+        ./neovim.nix
         ./packages.nix
         ./ripgrep-all.nix
         ./zoxide.nix
