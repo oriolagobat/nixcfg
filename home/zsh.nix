@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, lib, ...}: {
     programs.zsh = {
         enable = true;
         enableCompletion = true;
@@ -7,7 +7,6 @@
         defaultKeymap = "viins";
         oh-my-zsh = {
             enable = true;
-            theme = "powerlevel10k/powerlevel10k";
             plugins = [
                 "git"
                 "z"
@@ -25,9 +24,9 @@
             gspo = "git stash pop";
             gch = "git checkout";
             gpf = "git push --force";
-            ls = "${pkgs.lsd}/bin/lsd";
-            cat = "${pkgs.bat}/bin/bat";
-            cd = "${pkgs.zoxide}/bin/zoxide";
+            cdh = "${lib.getExe pkgs.zoxide} ~"; # Go home
+            ls = "${lib.getExe pkgs.lsd}";
+            cat = "${lib.getExe pkgs.bat}";
             switch = "sudo darwin-rebuild switch --flake /etc/nix-darwin";
         };
     };
