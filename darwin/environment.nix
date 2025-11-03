@@ -7,5 +7,8 @@ _: {
         systemPath = [
             "/opt/homebrew/bin"
         ];
+        variables = {
+            EDITOR = "nvim";
+        };
     };
 }
