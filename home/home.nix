@@ -2,7 +2,10 @@ _: {
     imports = [
         ./packages.nix
         ./bat.nix
+        ./difftastic.nix
+        ./git.nix
         ./lsd.nix
+        ./packages.nix
         ./ripgrep-all.nix
         ./zoxide.nix
         ./zsh.nix

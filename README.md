@@ -13,5 +13,7 @@ sudo darwin-rebuild switch
 - [ ] Create justfile properly
 - [ ] Document that it the code should live on /etc/nix-darwin
 - [ ] Install neovim properly
+- [ ] Configure git
+- [ ] Configure git signing
 - [X] Configure zsh
-    - [ ] Add nix environment.pathsToLink = [ "/share/zsh" ]
+- [X] Add nix environment.pathsToLink = [ "/share/zsh" ]

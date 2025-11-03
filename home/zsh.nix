@@ -28,6 +28,7 @@
             ls = "${pkgs.lsd}/bin/lsd";
             cat = "${pkgs.bat}/bin/bat";
             cd = "${pkgs.zoxide}/bin/zoxide";
+            switch = "sudo darwin-rebuild switch --flake /etc/nix-darwin";
         };
     };
 }
