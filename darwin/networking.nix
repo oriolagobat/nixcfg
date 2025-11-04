@@ -1,5 +1,4 @@
-{user, hostName, ...}:
-{
+{ hostName, ...}: {
     networking = {
         computerName = hostName;
         hostName = hostName;

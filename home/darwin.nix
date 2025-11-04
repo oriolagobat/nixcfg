@@ -1,4 +1,4 @@
-{ user, home-manager,  ... }:
+{ user, home-manager, nixvim, ... }:
 {
     imports = [
         home-manager.darwinModules.home-manager 
@@ -7,6 +7,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.${user} = ./home.nix;
             home-manager.backupFileExtension = ".backup";  # TODO: Remove this when migration to nix is done
+            home-manager.extraSpecialArgs = { inherit nixvim; };
         }
     ];
 }

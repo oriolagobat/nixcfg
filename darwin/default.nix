@@ -1,5 +1,4 @@
-{user, hostName, ...}:
-{
+_: {
     imports = [
         ./environment.nix
         ./networking.nix

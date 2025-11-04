@@ -3,9 +3,11 @@ _: {
         ./packages.nix
         ./bat.nix
         ./difftastic.nix
+        ./direnv.nix
         ./git.nix
         ./lsd.nix
-        ./neovim.nix
+        # ./neovim.nix
+        ./nixvim.nix
         ./packages.nix
         ./ripgrep-all.nix
         ./zoxide.nix

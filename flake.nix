@@ -4,13 +4,22 @@
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-        nix-darwin.url = "github:nix-darwin/nix-darwin/master";
-        nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+        nix-darwin = {
+            url = "github:nix-darwin/nix-darwin/master";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
-        home-manager.url = "github:nix-community/home-manager/";
-        home-manager.inputs.nixpkgs.follows = "nixpkgs";
+        home-manager = {
+            url = "github:nix-community/home-manager/master";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 
         nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+
+        nixvim = {
+            url = "github:nix-community/nixvim";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = inputs@{
@@ -19,6 +28,7 @@
         nix-darwin,
         home-manager,
         nix-homebrew,
+        nixvim,
     }: 
     let 
         user = "oriolagobat";
@@ -31,7 +41,7 @@
                     ./hosts/taln/configuration.nix
                     ./homebrew
                 ];
-                specialArgs = { inherit home-manager nix-homebrew user; hostName = "taln";};
+                specialArgs = { inherit home-manager nix-homebrew nixvim user; hostName = "taln";};
             };
         };
     };
