@@ -115,5 +115,28 @@
     extraPlugins = with pkgs.vimPlugins; [
       easymotion
     ];
+
+    plugins.lsp = {
+      enable = true;
+      servers = {
+        nil_ls.enable = true;
+        bashls.enable = true;
+      };
+    };
+
+    lsp.keymaps = [
+            {
+              key = "gd";
+              lspBufAction = "definition";
+            }
+            {
+              key = "gt";
+              lspBufAction = "type_definition";
+            }
+            {
+              key = "gi";
+              lspBufAction = "implementation";
+            }
+    ];
   };
 }
