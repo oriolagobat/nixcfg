@@ -25,5 +25,4 @@ sudo darwin-rebuild switch # Or use the switch alias defined in zsh.nix
 - [ ] Document
 - [ ] Check on direnv
 - [ ] Check certificate management (security.pki)
-- [ ] Check how easy is to replace neovim with nix-vim
 - [ ] Configure git signing
