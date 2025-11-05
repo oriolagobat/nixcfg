@@ -20,6 +20,7 @@
             gc = "git commit";
             gp = "git push";
             gs = "git status";
+            grh = "git reset --hard HEAD";
             gspu = "git stash push";
             gspo = "git stash pop";
             gch = "git checkout";
@@ -27,6 +28,12 @@
             ls = "${lib.getExe pkgs.lsd}";
             cat = "${lib.getExe pkgs.bat}";
             switch = "sudo darwin-rebuild switch --flake /etc/nix-darwin";
+        };
+
+        siteFunctions = {
+            nixs = ''
+                nix shell "nixpkgs#$1"
+            '';
         };
     };
 }
