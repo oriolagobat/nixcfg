@@ -50,7 +50,7 @@
             };
             screencapture = {
                 include-date = false;
-                # target = "clipboard";  # Save screenshots to clipboard
+                target = "clipboard";  # Save screenshots to clipboard
             };
             trackpad.Clicking = true;
         };
