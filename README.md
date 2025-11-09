@@ -24,5 +24,4 @@ sudo darwin-rebuild switch # Or use the switch alias defined in zsh.nix
 
 - [ ] Document
 - [ ] Check on direnv
-- [ ] Check certificate management (security.pki)
 - [ ] Configure git signing
