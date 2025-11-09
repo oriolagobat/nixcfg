@@ -1,13 +1,13 @@
-_: {
+{userCasks ? [], ... }: {
     homebrew = {
         enable = true;
 
         onActivation = {
             autoUpdate = true;
             upgrade = true;
-            # cleanup = "zap";   # TODO: After all wanted casks are specified uncomment
+            cleanup = "zap";
         };
 
-        casks = import ./casks.nix;
+        casks = import ./casks.nix ++ userCasks;
     };
 }

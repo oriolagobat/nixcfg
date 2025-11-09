@@ -23,6 +23,8 @@
     };
 
     outputs = {
+        self,
+        nixpkgs,
         nix-darwin,
         home-manager,
         nix-homebrew,
@@ -37,7 +39,6 @@
                 system = "x86_64-darwin";
                 modules = [
                     ./hosts/taln/configuration.nix
-                    ./homebrew
                 ];
                 specialArgs = { inherit home-manager nix-homebrew nixvim user; hostName = "taln";};
             };
@@ -45,7 +46,6 @@
                 system = "aarch64-darwin";
                 modules = [
                     ./hosts/lift/configuration.nix
-                    ./homebrew
                 ];
                 specialArgs = { inherit home-manager nix-homebrew nixvim user; hostName = "taln";};
             };

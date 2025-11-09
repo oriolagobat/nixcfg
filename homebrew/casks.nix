@@ -1,7 +1,5 @@
 [
     "docker-desktop"
-    "microsoft-word"
-    "microsoft-excel"
     "raycast"
     "signal"
     "spotify"
