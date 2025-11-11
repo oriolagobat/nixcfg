@@ -6,4 +6,5 @@
     "tuta-mail"
     "visual-studio-code"
     "warp"
+    "whatsapp"
 ]
