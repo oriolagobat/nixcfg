@@ -9,7 +9,7 @@ _: {
         settings = {
             user = {
                 name = "Oriol Agost Batalla";
-                email = "github@agost.com";
+                email = "oriolagobat@gmail.com";
             };
             github.user = "oriolagobat";
         };
