@@ -114,6 +114,7 @@
 
     extraPlugins = with pkgs.vimPlugins; [
       easymotion
+      material-nvim
     ];
 
     plugins.lsp = {
