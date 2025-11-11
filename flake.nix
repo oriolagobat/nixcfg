@@ -47,7 +47,7 @@
                 modules = [
                     ./hosts/lift/configuration.nix
                 ];
-                specialArgs = { inherit home-manager nix-homebrew nixvim user; hostName = "taln";};
+                specialArgs = { inherit home-manager nix-homebrew nixvim user; hostName = "lift";};
             };
         };
     };
