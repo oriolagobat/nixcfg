@@ -7,4 +7,5 @@
     "visual-studio-code"
     "warp"
     "whatsapp"
+    "adobe-acrobat-reader"
 ]
