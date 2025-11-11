@@ -11,7 +11,7 @@ _: {
                 name = "Oriol Agost Batalla";
                 email = "github@agost.com";
             };
-            github.user = "orioagobat";
+            github.user = "oriolagobat";
         };
 
         # signing = {
