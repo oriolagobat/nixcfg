@@ -1,3 +1,5 @@
 [
   "chatgpt"
+  "ollama-app"
+  "slack"
 ]
