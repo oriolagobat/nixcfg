@@ -122,6 +122,7 @@
       servers = {
         nil_ls.enable = true;
         bashls.enable = true;
+        pyrefly.enable = true;
       };
     };
 
