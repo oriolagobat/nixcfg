@@ -6,7 +6,6 @@ _: {
         ./direnv.nix
         ./git.nix
         ./lsd.nix
-        # ./neovim.nix
         ./nixvim.nix
         ./packages.nix
         ./ripgrep-all.nix
