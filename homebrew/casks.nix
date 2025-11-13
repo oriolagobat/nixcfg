@@ -8,4 +8,5 @@
     "warp"
     "whatsapp"
     "adobe-acrobat-reader"
+    "obsidian"
 ]

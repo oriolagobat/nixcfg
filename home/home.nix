@@ -7,6 +7,7 @@ _: {
         ./git.nix
         ./lsd.nix
         ./nixvim.nix
+        ./obsidian.nix
         ./packages.nix
         ./ripgrep-all.nix
         ./zoxide.nix
