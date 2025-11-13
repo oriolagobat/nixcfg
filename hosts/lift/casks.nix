@@ -2,5 +2,5 @@
   "chatgpt"
   "ollama-app"
   "slack"
-  "notion"
+  "obsidian"
 ]
