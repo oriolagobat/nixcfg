@@ -8,6 +8,7 @@
             remapCapsLockToControl = true;
         };
         startup.chime = false;
+        nixpkgsRelease = "unstable";
         defaults = {
             dock = {
                 autohide = true;
