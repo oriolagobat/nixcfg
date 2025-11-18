@@ -20,6 +20,7 @@
             gc = "git commit";
             gp = "git push";
             gs = "git status";
+            gpu = "git pull";
             grh = "git reset --hard HEAD";
             gspu = "git stash push";
             gspo = "git stash pop";
