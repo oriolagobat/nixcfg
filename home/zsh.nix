@@ -26,6 +26,7 @@
             gspo = "git stash pop";
             gch = "git checkout";
             gpf = "git push --force";
+            grc = "git rebase --continue";
             ls = "${lib.getExe pkgs.lsd}";
             cat = "${lib.getExe pkgs.bat}";
             switch = "sudo darwin-rebuild switch --flake /etc/nix-darwin";
