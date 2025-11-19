@@ -48,6 +48,7 @@
                 AppleShowAllExtensions = true;
                 AppleShowAllFiles = true;
                 NSWindowShouldDragOnGesture = true; # Allow dragging windows by clicking anywhere
+                KeyRepeat = 2;  # Fast key repeat
             };
             screencapture = {
                 include-date = false;
