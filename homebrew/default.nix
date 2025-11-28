@@ -16,7 +16,6 @@
 
 		casks = import ./casks.nix ++ userCasks;
 
-		# Disabled bc of https://github.com/mas-cli/mas/issues/1029
-		# masApps = import ./mas.nix;
+		masApps = import ./mas.nix;
   };
 }
