@@ -20,11 +20,6 @@
             url = "github:nix-community/nixvim";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-
-        nixos-generators = {
-            url = "github:nix-community/nixos-generators";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
     };
 
     outputs = {
@@ -34,10 +29,18 @@
         home-manager,
         nix-homebrew,
         nixvim,
-        nixos-generators,
     }: 
     let 
         user = "oriolagobat";
+
+        mkNixosHost = { hostName, system, extraModules ? [ ] }:
+            nixpkgs.lib.nixosSystem {
+                inherit system;
+                modules = [
+                ./hosts/${hostName}/configuration.nix
+                ] ++ extraModules;
+                specialArgs = { inherit user hostName; };
+            };
     in
     {
         darwinConfigurations = {
@@ -57,24 +60,22 @@
             };
         };
         nixosConfigurations = {
-            syl = {
+            syl = mkNixosHost {
+                hostName = "syl";
                 system = "aarch64-linux";
-                modules = [
-                    ./hosts/syl/configuration.nix
+            };
+
+            syl-sd = mkNixosHost {
+                hostName = "syl";
+                system = "aarch64-linux";
+                extraModules = [
+                    "${nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
+                    { disabledModules = [ "profiles/base.nix" ]; }
                 ];
-                specialArgs = { inherit nixos-generators user; hostName = "syl"; };
             };
         };
 
-        packages.aarch64-linux = {
-            syl-iso = nixos-generators.nixosGenerate {
-            system = "aarch64-linux";
-            modules = [
-                ./hosts/syl/configuration.nix
-            ];
-            specialArgs = { hostName = "syl"; };
-            format = "sd-aarch64-installer";
-            };
-        };
+        packages.aarch64-linux.syl-sd-image =
+            self.nixosConfigurations.syl-sd.config.system.build.sdImage;
     };
 }
