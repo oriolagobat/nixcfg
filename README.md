@@ -23,7 +23,7 @@ sudo darwin-rebuild switch # Or use the switch alias defined in zsh.nix
 ### Build rpi image
 
 ```bash 
-nix build .#<hostname>-sd-image
+nix build .#<hostname>-sd-image --system aarch64-linux
 ```
 
 This will produce a `.img.zst` file in the `result/sd-image` directory.
