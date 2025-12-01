@@ -6,6 +6,6 @@ _: {
     #   enable = true;
     #   useRoutingFeatures = "both";
     # };
-    tailscale.enable = true;
+    # tailscale.enable = true;
   };
 }
