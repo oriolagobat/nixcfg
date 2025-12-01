@@ -2,7 +2,7 @@
 {
     system = {
         primaryUser = user;
-        stateVersion = "6";
+        stateVersion = 6;
         keyboard = {
             enableKeyMapping = true;
             remapCapsLockToControl = true;
