@@ -29,12 +29,17 @@
             grc = "git rebase --continue";
             ls = "${lib.getExe pkgs.lsd}";
             cat = "${lib.getExe pkgs.bat}";
-            switch = "sudo darwin-rebuild switch --flake /etc/nix-darwin";
+            switch = "nh darwin switch /etc/nix-darwin";
+            update = "cd /etc/nix-darwin && nix flake update && switch";
         };
 
         siteFunctions = {
             nixs = ''
                 nix shell "nixpkgs#$1"
+            '';
+
+            nixr = ''
+                nix run "nixpkgs#$1"
             '';
         };
     };

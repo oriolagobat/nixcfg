@@ -6,6 +6,7 @@ _: {
         ./direnv.nix
         ./git.nix
         ./lsd.nix
+        ./nh.nix
         ./nixvim.nix
         ./obsidian.nix
         ./packages.nix
