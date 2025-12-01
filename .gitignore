@@ -7,3 +7,6 @@ result-*
 
 # Ignore qcows
 *.qcow*
+
+# Ignore builder keys
+keys/
