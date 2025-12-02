@@ -21,9 +21,10 @@ sudo darwin-rebuild switch # Or use the switch alias defined in zsh.nix
 ```
 
 ### Build rpi image
+#### ISO
 
 ```bash 
-nix build .#<hostname>-sd-image --system aarch64-linux
+nix build .#<hostname>-sd-image
 ```
 
 This will produce a `.img.zst` file in the `result/sd-image` directory.
@@ -31,8 +32,16 @@ To transform it into a `.iso` file, use:
 
 ```bash
 nix run nixpkgs#zstd -- -d result/sd-image/<image>.img.zst
-diskutil list external physical
-sudo dd if=rpi.img of=/dev/disk4 bs=4m status=progress
+```
+
+#### Rebuild it and flash it remotely
+```bash
+nix run nixpkgs#nixos-rebuild-ng -- \
+  switch \
+  --flake .#syl \
+  --target-host oriolagobat@10.100.0.187 \
+  --sudo \
+  --ask-sudo-password
 ```
 
 ### Fix linux builder errors:
