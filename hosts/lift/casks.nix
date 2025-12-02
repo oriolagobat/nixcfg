@@ -4,4 +4,6 @@
   "adguard"
   "tailscale-app"
   "crossover"
+  "steam"
+  "balenaetcher"
 ]

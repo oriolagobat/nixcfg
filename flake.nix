@@ -75,7 +75,7 @@
             };
         };
 
-        packages.aarch64-linux.syl-sd-image =
+        packages.aarch64-darwin.syl-sd-image =
             self.nixosConfigurations.syl-sd.config.system.build.sdImage;
     };
 }

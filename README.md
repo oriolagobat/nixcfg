@@ -35,6 +35,12 @@ diskutil list external physical
 sudo dd if=rpi.img of=/dev/disk4 bs=4m status=progress
 ```
 
+### Fix linux builder errors:
+```bash
+sudo chown "$USER" /etc/nix/builder_ed25519
+sudo chmod 600 /etc/nix/builder_ed25519
+```
+
 ## TODOs
 
 - [ ] Document
