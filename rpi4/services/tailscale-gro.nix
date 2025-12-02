@@ -1,12 +1,4 @@
 { pkgs, ... }: {
-  services = {
-    sshd.enable = true;
-    fwupd.enable = false;
-    tailscale = {
-      enable = true;
-      useRoutingFeatures = "both";
-    };
-  };
   systemd.services.tailscale-gro = {
     description = "Configure UDP GRO for Tailscale exit node";
     wantedBy = [ "multi-user.target" ];

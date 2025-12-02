@@ -5,7 +5,7 @@ _: {
     ./network.nix
     ./nix.nix
     ./pkgs.nix
-    ./services.nix
+    ./services
     ./system.nix
     ./users.nix
   ];
