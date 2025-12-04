@@ -1,6 +1,6 @@
 keys:
   - &admin_lift age1k5tjvx77vldn2raadgjntg7naqfwrtkeewdlgk73a47e4ucf3pqsvcg86w
-  - &server_syl age1zz62cpawus9uah9ca443fc20khtngq2jyz6km2ckk8xc062wy4kspqpqcs
+  - &server_syl age1adkuuudkm5ljf2r2u75m2upvkuw568ge843l2rhtacdcas6evvyqg0y65c
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
