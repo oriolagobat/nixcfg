@@ -6,12 +6,13 @@
       enable = true;
       useRoutingFeatures = "both";
     };
-    # calibre-web = {
-    #   enable = true;
-    #   options = {
-    #     enableBookConversion = true;
-    #     enableBookUploading = true;
-    #   };
-    # };
+    calibre-web = {
+      enable = true;
+      listen.port = 8083;
+      options = {
+        enableBookConversion = true;
+        enableBookUploading = true;
+      };
+    };
   };
 }
