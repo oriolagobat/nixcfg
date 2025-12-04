@@ -20,6 +20,11 @@
             url = "github:nix-community/nixvim";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+
+        sops-nix = {
+            url = "github:Mic92/sops-nix";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
     };
 
     outputs = {
@@ -29,17 +34,18 @@
         home-manager,
         nix-homebrew,
         nixvim,
+        sops-nix,
     }: 
     let 
         user = "oriolagobat";
 
-        mkNixosHost = { hostName, system, extraModules ? [ ] }:
+        mkNixosHost = { sops-nix, hostName, system, extraModules ? [ ] }:
             nixpkgs.lib.nixosSystem {
                 inherit system;
                 modules = [
                 ./hosts/${hostName}/configuration.nix
                 ] ++ extraModules;
-                specialArgs = { inherit user hostName; };
+                specialArgs = { inherit sops-nix user hostName; };
             };
     in
     {
@@ -61,11 +67,13 @@
         };
         nixosConfigurations = {
             syl = mkNixosHost {
+                inherit sops-nix;
                 hostName = "syl";
                 system = "aarch64-linux";
             };
 
             syl-sd = mkNixosHost {
+                inherit sops-nix;
                 hostName = "syl";
                 system = "aarch64-linux";
                 extraModules = [
