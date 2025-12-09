@@ -35,11 +35,15 @@
 
         siteFunctions = {
             nixs = ''
-                nix shell "nixpkgs#$1"
+                local pkg="$1"
+                shift
+                nix shell "nixpkgs#$pkg" -- "$@"
             '';
 
             nixr = ''
-                nix run "nixpkgs#$1"
+                local pkg="$1"
+                shift
+                nix run "nixpkgs#$pkg" -- "$@"
             '';
         };
     };
