@@ -6,9 +6,12 @@
       enable = true;
       useRoutingFeatures = "both";
     };
-    calibre-web = {  # TODO: This works but I need to open the port with firewall (check notes)
+    calibre-web = {
       enable = true;
-      listen.port = 8083;
+      listen = {
+        ip = "0.0.0.0";
+        port = 8083;
+      };
       options = {
         enableBookConversion = true;
         enableBookUploading = true;

@@ -4,5 +4,8 @@
     wireless = {
       enable = false;
     };
+    firewall = {
+      enable = false;
+    };
   };
 }
