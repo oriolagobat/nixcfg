@@ -6,4 +6,6 @@
   "crossover"
   "steam"
   "balenaetcher"
+  "gog-galaxy"
+  "playcover-community"
 ]
