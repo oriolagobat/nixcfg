@@ -5,6 +5,7 @@ _: {
         ./networking.nix
         ./nix.nix
         ./nixpkgs.nix
+        ./secrets.nix
         ./security.nix
         ./system.nix
         ./users.nix

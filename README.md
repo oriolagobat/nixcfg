@@ -39,7 +39,7 @@ nix run nixpkgs#zstd -- -d result/sd-image/<image>.img.zst
 nix run nixpkgs#nixos-rebuild-ng -- \
   switch \
   --flake .#syl \
-  --target-host oriolagobat@10.100.0.187 \
+  --target-host syl \
   --sudo \
   --ask-sudo-password
 ```

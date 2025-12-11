@@ -62,7 +62,7 @@
                 modules = [
                     ./hosts/lift/configuration.nix
                 ];
-                specialArgs = { inherit home-manager nix-homebrew nixvim user; hostName = "lift";};
+                specialArgs = { inherit home-manager nix-homebrew nixvim sops-nix user; hostName = "lift";};
             };
         };
         nixosConfigurations = {

@@ -1,4 +1,4 @@
-_: {
+{ config, ... }: {
     nix = {
         enable = true;
         channel.enable = false;
@@ -31,4 +31,5 @@ _: {
             trusted-users = [ "@admin" ];
         };
     };
+    environment.variables.NIX_USER_CONF_FILES = "${config.sops.templates."nix-access-tokens.conf".path}";
 }
