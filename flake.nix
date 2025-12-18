@@ -55,7 +55,7 @@
                 modules = [
                     ./hosts/taln/configuration.nix
                 ];
-                specialArgs = { inherit home-manager nix-homebrew nixvim user; hostName = "taln";};
+                specialArgs = { inherit home-manager nix-homebrew nixvim sops-nix user; hostName = "taln";};
             };
             lift = nix-darwin.lib.darwinSystem {
                 system = "aarch64-darwin";
