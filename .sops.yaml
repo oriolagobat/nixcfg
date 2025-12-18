@@ -1,9 +1,11 @@
 keys:
   - &admin_lift age1k5tjvx77vldn2raadgjntg7naqfwrtkeewdlgk73a47e4ucf3pqsvcg86w
   - &server_syl age1adkuuudkm5ljf2r2u75m2upvkuw568ge843l2rhtacdcas6evvyqg0y65c
+  - &server_taln age1xm9z3mdr7z3wlmcg5wvzargl0fqa2qhkdl5j7dwelhtechvzfpts87dn9p
 creation_rules:
   - path_regex: secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
     - age:
       - *admin_lift
       - *server_syl
+      - *server_taln
