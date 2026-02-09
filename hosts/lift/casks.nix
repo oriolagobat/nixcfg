@@ -9,4 +9,5 @@
   "gog-galaxy"
   "playcover-community"
   "openvpn-connect"
+  "virtualbox"
 ]
