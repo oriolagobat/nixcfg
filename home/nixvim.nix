@@ -113,7 +113,7 @@
     };
 
     extraPlugins = with pkgs.vimPlugins; [
-      easymotion
+      vim-easymotion
       material-nvim
     ];
 
