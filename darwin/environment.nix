@@ -1,4 +1,4 @@
-_: {
+{user, ...}: {
     environment = {
         pathsToLink = [
             "/share/zsh" 
@@ -6,6 +6,7 @@ _: {
         ];
         systemPath = [
             "/opt/homebrew/bin"
+            "/Users/${user}/.local/bin"
         ];
     };
 }
