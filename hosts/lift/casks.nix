@@ -10,4 +10,6 @@
   "playcover-community"
   "openvpn-connect"
   "virtualbox"
+  "pycharm"
+  "codex-app"
 ]
