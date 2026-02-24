@@ -12,4 +12,6 @@
   "virtualbox"
   "pycharm"
   "codex-app"
+  "firefox"
+  "autofirma"
 ]
