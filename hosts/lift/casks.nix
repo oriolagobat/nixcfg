@@ -14,4 +14,5 @@
   "codex-app"
   "firefox"
   "autofirma"
+  "webstorm"
 ]
