@@ -14,5 +14,6 @@
   "codex-app"
   "firefox"
   "autofirma"
-  "webstorm"
+  "intellij-idea"
+  "discord"
 ]
