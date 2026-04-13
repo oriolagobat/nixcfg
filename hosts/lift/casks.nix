@@ -16,4 +16,5 @@
   "autofirma"
   "intellij-idea"
   "discord"
+  "minecraft"
 ]
