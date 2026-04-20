@@ -15,6 +15,4 @@
   "firefox"
   "autofirma"
   "intellij-idea"
-  "discord"
-  "minecraft"
 ]
