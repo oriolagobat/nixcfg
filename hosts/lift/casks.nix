@@ -15,4 +15,5 @@
   "firefox"
   "autofirma"
   "intellij-idea"
+  "prismlauncher"
 ]
