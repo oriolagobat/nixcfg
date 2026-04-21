@@ -16,4 +16,5 @@
   "autofirma"
   "intellij-idea"
   "prismlauncher"
+  "slack"
 ]
