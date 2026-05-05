@@ -1,6 +1,5 @@
 [
   "chatgpt"
-  "ollama-app"
   "adguard"
   "tailscale-app"
   "crossover"
@@ -9,12 +8,10 @@
   "gog-galaxy"
   "playcover-community"
   "openvpn-connect"
-  "virtualbox"
   "pycharm"
   "codex-app"
   "firefox"
   "autofirma"
   "intellij-idea"
   "prismlauncher"
-  "slack"
 ]
