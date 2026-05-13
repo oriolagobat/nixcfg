@@ -11,7 +11,7 @@
   "pycharm"
   "codex-app"
   "firefox"
-  "autofirma"
+  # "autofirma"
   "intellij-idea"
   "prismlauncher"
 ]
