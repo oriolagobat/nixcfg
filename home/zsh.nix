@@ -27,6 +27,7 @@
             gch = "git checkout";
             gpf = "git push --force";
             grc = "git rebase --continue";
+            gl = "git log";
             ls = "${lib.getExe pkgs.lsd}";
             cat = "${lib.getExe pkgs.bat}";
             switch = "nh darwin switch /etc/nix-darwin";
