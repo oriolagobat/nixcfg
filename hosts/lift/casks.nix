@@ -14,4 +14,5 @@
   # "autofirma"
   "intellij-idea"
   "prismlauncher"
+  "webstorm"
 ]
