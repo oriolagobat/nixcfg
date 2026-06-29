@@ -9,6 +9,7 @@
     vimdiffAlias = true;
     colorscheme = "material-palenight";
     clipboard.register = "unnamedplus";
+    nixpkgs.useGlobalPackages = true;
 
     opts = {
       number = true;
