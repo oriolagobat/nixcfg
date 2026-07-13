@@ -11,8 +11,9 @@
   "pycharm"
   # "codex-app"  # Renamed to chatgpt
   "firefox"
-  # "autofirma"  # Better managed by myself
+  "autofirma"
   "intellij-idea"
   "prismlauncher"
   "webstorm"
+  "google-chrome"
 ]
