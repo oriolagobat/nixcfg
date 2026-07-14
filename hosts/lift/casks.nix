@@ -9,9 +9,8 @@
   "playcover-community"
   "openvpn-connect"
   "pycharm"
-  # "codex-app"  # Renamed to chatgpt
   "firefox"
-  "autofirma"
+  # "autofirma"
   "intellij-idea"
   "prismlauncher"
   "webstorm"
