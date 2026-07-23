@@ -14,5 +14,5 @@
   "intellij-idea"
   "prismlauncher"
   "webstorm"
-  "google-chrome"
+  # "google-chrome"
 ]
