@@ -6,7 +6,7 @@
   ];
 
   sops = {
-    defaultSopsFile = ../secrets/${hostName}.yaml;
+    defaultSopsFile = ../../../secrets/urithiru.yaml;
 
     age.sshKeyPaths = [
       "/home/${user}/.ssh/${hostName}-secrets"
