@@ -8,7 +8,7 @@
         "github.com/caddy-dns/porkbun@v0.3.1"
       ];
 
-      hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+      hash = "sha256-YmKKk5sSOVtv3fwF3kLZtxGL8YpQmHLR59eOcFnhfUo="
     };
 
     virtualHosts = {
