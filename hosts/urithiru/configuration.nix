@@ -12,6 +12,7 @@
     ../../modules/nixos/secrets.nix
 
     ../../modules/nixos/tailscale.nix
+    ../../modules/nixos/caddy.nix
     ../../modules/nixos/nixarr.nix
   ];
 
