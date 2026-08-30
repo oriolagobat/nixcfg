@@ -33,4 +33,15 @@
     sonarr.enable = true;
     seerr.enable = true;
   };
+
+  # Open ports for Transmission (51413 TCP/UDP) 
+  networking.firewall = {
+    allowedTCPPorts = [
+      51413
+    ];
+
+    allowedUDPPorts = [
+      51413
+    ];
+  };
 }
