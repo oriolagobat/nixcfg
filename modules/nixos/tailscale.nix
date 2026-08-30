@@ -4,7 +4,7 @@
   services.tailscale = {
     enable = true;
     useRoutingFeatures = "server";
-    authKeyFile = config.age.secrets.tailscaleKey.path;
+    authKeyFile = config.sops.secrets.tailscaleKey.path;
     extraSetFlags = [
       "--advertise-exit-node"
     ];
