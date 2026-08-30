@@ -7,11 +7,10 @@
 
     ../../modules/nixos/base.nix
     ../../modules/nixos/ssh.nix
+    ../../modules/nixos/users.nix
+    ../../modules/nixos/secrets.nix
   ];
 
   networking.hostName = "urithiru";
-
-
-
   system.stateVersion = "26.05";
 }
