@@ -23,6 +23,7 @@
             url = "github:Mic92/sops-nix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        nixarr.url = "github:nix-media-server/nixarr";
     };
 
     outputs = {
@@ -34,6 +35,7 @@
         nix-homebrew,
         nixvim,
         sops-nix,
+        nixarr,
     }: 
     let 
         user = "oriolagobat";
@@ -44,7 +46,7 @@
                 modules = [
                 ./hosts/${hostName}/configuration.nix
                 ] ++ extraModules;
-                specialArgs = { inherit sops-nix user hostName; };
+                specialArgs = { inherit sops-nix user hostName nixarr; };
             };
     in
     {

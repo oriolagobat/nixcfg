@@ -12,6 +12,7 @@
     ../../modules/nixos/secrets.nix
 
     ../../modules/nixos/tailscale.nix
+    ../../modules/nixos/nixarr.nix
   ];
 
   networking.hostName = "urithiru";
