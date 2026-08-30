@@ -3,6 +3,7 @@
 
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+        nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
 
         nix-darwin = {
             url = "github:nix-darwin/nix-darwin/master";
@@ -27,6 +28,7 @@
     outputs = {
         self,
         nixpkgs,
+        nixpkgs-stable,
         nix-darwin,
         home-manager,
         nix-homebrew,
@@ -36,8 +38,8 @@
     let 
         user = "oriolagobat";
 
-        mkNixosHost = { sops-nix, hostName, system, extraModules ? [ ] }:
-            nixpkgs.lib.nixosSystem {
+        mkNixosHost = { nixpkgsInput ? nixpkgs, sops-nix, hostName, system, extraModules ? [ ] }:
+            nixpkgsInput.lib.nixosSystem {
                 inherit system;
                 modules = [
                 ./hosts/${hostName}/configuration.nix
@@ -81,6 +83,7 @@
 
             urithiru = mkNixosHost {
                 inherit sops-nix;
+                nixpkgsInput = nixpkgs-stable;
                 hostName = "urithiru";
                 system = "x86_64-linux";
             };
