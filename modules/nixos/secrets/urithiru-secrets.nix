@@ -17,8 +17,8 @@
     };
 
     secrets.tailscaleKey = {};
-    secrets.porkbun_api_key = {};
-    secrets.porkbun_api_secret_key = {};
+    secrets.porkbunApiKey = {};
+    secrets.porkbunApiSecretKey = {};
 
     templates."caddy-porkbun.env".content = ''
       PORKBUN_API_KEY=${config.sops.placeholder.porkbunApiKey}
