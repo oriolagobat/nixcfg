@@ -3,11 +3,11 @@
     enable = true;
 
     virtualHosts = {
-      "jelly.agost.info".extraConfig = ''
+      "http://jelly.home.agost.info".extraConfig = ''
         reverse_proxy 127.0.0.1:8096
       '';
 
-      "seer.agost.info".extraConfig = ''
+      "http://seer.home.agost.info".extraConfig = ''
         reverse_proxy 127.0.0.1:5055
       '';
     };
