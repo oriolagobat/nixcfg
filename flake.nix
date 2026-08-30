@@ -78,6 +78,12 @@
                     { disabledModules = [ "profiles/base.nix" ]; }
                 ];
             };
+
+            urithiru = mkNixosHost {
+                inherit sops-nix;
+                hostName = "urithiru";
+                system = "x86_64-linux";
+            };
         };
 
         packages.aarch64-darwin.syl-sd-image =
