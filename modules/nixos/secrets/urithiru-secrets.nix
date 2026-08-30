@@ -21,8 +21,8 @@
     secrets.porkbun_api_secret_key = {};
 
     templates."caddy-porkbun.env".content = ''
-      PORKBUN_API_KEY=${config.sops.placeholder.porkbun_api_key}
-      PORKBUN_API_SECRET_KEY=${config.sops.placeholder.porkbun_api_secret_key}
+      PORKBUN_API_KEY=${config.sops.placeholder.porkbunApiKey}
+      PORKBUN_API_SECRET_KEY=${config.sops.placeholder.porkbunApiSecretKey}
     '';
   };
 }
