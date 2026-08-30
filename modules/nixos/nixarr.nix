@@ -31,6 +31,6 @@
     prowlarr.enable = true;
     radarr.enable = true;
     sonarr.enable = true;
-    jellyseerr.enable = true;
+    seerr.enable = true;
   };
 }
