@@ -15,8 +15,6 @@
     secrets.userPwd = {
       neededForUsers = true;
     };
-    secrets.tailscaleKey = {
-      neededForServices = true;
-    };
+    secrets.tailscaleKey = {};
   };
 }
