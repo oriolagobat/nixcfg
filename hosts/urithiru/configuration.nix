@@ -9,7 +9,7 @@
     ../../modules/nixos/base.nix
     ../../modules/nixos/ssh.nix
     ../../modules/nixos/users.nix
-    ../../modules/nixos/secrets.nix
+    ../../modules/nixos/secrets/urithiru-secrets.nix
 
     ../../modules/nixos/tailscale.nix
     ../../modules/nixos/caddy.nix
