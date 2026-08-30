@@ -1,13 +1,36 @@
+{ config, pkgs, ...}:
 {
   services.caddy = {
     enable = true;
 
+    package = pkgs.caddy.withPlugins {
+      plugins = [
+        "github.com/caddy-dns/porkbun@v0.3.1"
+      ];
+
+      hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    };
+
     virtualHosts = {
-      "http://jelly.home.agost.info".extraConfig = ''
+      "jelly.home.agost.info".extraConfig = ''
+        tls {
+          dns porkbun {
+            api_key {env.PORKBUN_API_KEY}
+            api_secret_key {env.PORKBUN_API_SECRET_KEY}
+          }
+        }
+
         reverse_proxy 127.0.0.1:8096
       '';
 
-      "http://seer.home.agost.info".extraConfig = ''
+      "seer.home.agost.info".extraConfig = ''
+        tls {
+          dns porkbun {
+            api_key {env.PORKBUN_API_KEY}
+            api_secret_key {env.PORKBUN_API_SECRET_KEY}
+          }
+        }
+
         reverse_proxy 127.0.0.1:5055
       '';
     };
@@ -17,4 +40,7 @@
     80
     443
   ];
+
+  systemd.services.caddy.serviceConfig.EnvironmentFile =
+    config.sops.templates."caddy-porkbun.env".path;
 }
