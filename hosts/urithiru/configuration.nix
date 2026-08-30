@@ -9,6 +9,8 @@
     ../../modules/nixos/ssh.nix
     ../../modules/nixos/users.nix
     ../../modules/nixos/secrets.nix
+
+    ../../modules/nixos/tailscale.nix
   ];
 
   networking.hostName = "urithiru";
