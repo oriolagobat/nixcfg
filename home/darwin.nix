@@ -1,12 +1,12 @@
 { user, home-manager, nixvim, ... }:
 {
     imports = [
-        home-manager.darwinmodules.home-manager 
+        home-manager.darwinModules.home-manager 
         {
-            home-manager.useglobalpkgs = true;
-            home-manager.useuserpackages = true;
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
             home-manager.users.${user} = ./home.nix;
-            home-manager.extraspecialargs = { inherit nixvim; };
+            home-manager.extraSpecialArgs = { inherit nixvim; };
         }
     ];
 }
