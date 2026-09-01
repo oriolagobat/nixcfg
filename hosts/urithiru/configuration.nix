@@ -15,7 +15,7 @@
     ../../modules/nixos/tailscale.nix
     ../../modules/nixos/caddy.nix
     ../../modules/nixos/nixarr.nix
-    ../../home/nixos.nix
+    # ../../home/nixos.nix
   ];
 
   networking.hostName = "urithiru";
