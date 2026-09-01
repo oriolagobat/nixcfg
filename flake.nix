@@ -46,7 +46,7 @@
                 modules = [
                 ./hosts/${hostName}/configuration.nix
                 ] ++ extraModules;
-                specialArgs = { inherit sops-nix user hostName nixarr; };
+                specialArgs = { inherit home-manager nixvim sops-nix user hostName nixarr; };
             };
     in
     {
