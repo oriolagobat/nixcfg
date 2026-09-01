@@ -13,4 +13,6 @@
             user = user;
             enableRosetta = true;
         };
+
+        home-manager.users.${user}.imports = [ ../../home/lift.nix ];
 }

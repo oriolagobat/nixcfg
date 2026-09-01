@@ -30,8 +30,6 @@
             gl = "git log";
             ls = "${lib.getExe pkgs.lsd}";
             cat = "${lib.getExe pkgs.bat}";
-            switch = "nh darwin switch /etc/nix-darwin";
-            update = "cd /etc/nix-darwin && nix flake update && switch";
         };
 
         siteFunctions = {
