@@ -1,4 +1,4 @@
-{ config, user, ... }:
+{ config, user, pkgs, ... }:
 
 {
   users = {
@@ -6,6 +6,7 @@
 
     users."${user}" = {
       isNormalUser = true;
+      shell = pkgs.zsh;
 
       hashedPasswordFile =
         config.sops.secrets.userPwd.path;
@@ -19,6 +20,8 @@
       ];
     };
   };
+
+  programs.zsh.enable = true;
 
   security.sudo.enable = true;
 }
