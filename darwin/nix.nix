@@ -1,9 +1,10 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
     nix = {
         enable = true;
         channel.enable = false;
         linux-builder = {
             enable = true;
+            package = pkgs.darwin.linux-builder-vz;
             ephemeral = true;
             systems = [ 
                     "aarch64-linux" 
