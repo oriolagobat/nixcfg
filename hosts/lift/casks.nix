@@ -15,4 +15,7 @@
   "prismlauncher"
   "webstorm"
   # "google-chrome"
+
+
+  "tableplus" # Database viewer, remove later
 ]
