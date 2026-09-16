@@ -15,6 +15,7 @@
   "prismlauncher"
   "webstorm"
   # "google-chrome"
+  "virtualbox"
 
 
   "tableplus" # Database viewer, remove later
