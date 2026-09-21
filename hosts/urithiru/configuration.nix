@@ -16,6 +16,7 @@
     ../../modules/nixos/caddy.nix
     ../../modules/nixos/nixarr.nix
     ../../home/nixos.nix
+    ../../modules/nixos/adguard.nix
   ];
 
   networking.hostName = "urithiru";

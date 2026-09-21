@@ -33,6 +33,17 @@
 
         reverse_proxy 127.0.0.1:5055
       '';
+
+      "adguard.home.agost.info".extraConfig = ''
+        tls {
+          dns porkbun {
+            api_key {env.PORKBUN_API_KEY}
+            api_secret_key {env.PORKBUN_API_SECRET_KEY}
+          }
+        }
+
+        reverse_proxy 127.0.0.1:3000
+      '';
     };
   };
 
