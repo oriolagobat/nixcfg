@@ -14,13 +14,34 @@
         }
       ];
 
-      clients.runtime_sources = {
-        hosts = true;
-        rdns = true;
-        arp = true;
-        dhcp = true;
-        whois = false;
+      clients = {
+        persistent = [
+          {
+            name = "lift";
+            ids = [ "100.91.220.56" ];
+          }
+          {
+            name = "phone";
+            ids = [ "100.73.20.117" ];
+          }
+          {
+            name = "shallan";
+            ids = [ "100.82.30.0" ];
+          }
+          {
+            name = "urithiru";
+            ids = [ "100.98.245.53" ];
+          }
+        ];
+        runtime_sources = {
+          hosts = true;
+          rdns = true;
+          arp = true;
+          dhcp = true;
+          whois = false;
+        };
       };
+
 
       dns = {
         bind_hosts = [
