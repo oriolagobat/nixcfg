@@ -1,4 +1,11 @@
 { ... }:
+let
+  mkAdguardClient = name: ip: {
+    inherit name;
+    ids = [ ip ];
+    use_global_settings = true;
+  };
+in
 {
   services.adguardhome = {
     enable = true;
@@ -8,7 +15,7 @@
 
     settings = {
       user_rules = [
-          "@@||home.agost.info^"
+          "@@||home.agost.info^"  # Ignore Hagezi DNS Rebind Protection for my home domain
       ];
       users = [
         {
@@ -19,22 +26,10 @@
 
       clients = {
         persistent = [
-          {
-            name = "lift";
-            ids = [ "100.91.220.56" ];
-          }
-          {
-            name = "phone";
-            ids = [ "100.73.20.117" ];
-          }
-          {
-            name = "shallan";
-            ids = [ "100.82.30.0" ];
-          }
-          {
-            name = "urithiru";
-            ids = [ "100.98.245.53" ];
-          }
+          (mkAdguardClient "lift" "100.91.220.56")
+          (mkAdguardClient "phone" "100.73.20.117")
+          (mkAdguardClient "shallan" "100.82.30.0")
+          (mkAdguardClient "urithiru" "100.98.245.53")
         ];
         runtime_sources = {
           hosts = true;
@@ -53,11 +48,7 @@
         ];
         port = 53;
         upstream_dns = [
-          # "Normal" DNS
           "https://dns.quad9.net/dns-query"
-
-           # Home split DNS
-          "[/home.agost.info/]192.168.1.1"
         ];
         bootstrap_dns = [
           "9.9.9.9"
@@ -79,6 +70,13 @@
         filtering_enabled = true;
         parental_enabled = false;
         safe_search.enabled = false;
+        rewrites = [
+          {
+            domain = "*.home.agost.info";
+            answer = "192.168.1.166";
+            enabled = true;
+          }
+        ];
       };
 
       filters = [
