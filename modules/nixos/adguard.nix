@@ -7,6 +7,9 @@
     port = 3000;
 
     settings = {
+      user_rules = [
+          "@@||home.agost.info^"
+      ];
       users = [
         {
           name = "admin";
@@ -50,7 +53,11 @@
         ];
         port = 53;
         upstream_dns = [
+          # "Normal" DNS
           "https://dns.quad9.net/dns-query"
+
+           # Home split DNS
+          "[/home.agost.info/]192.168.1.1"
         ];
         bootstrap_dns = [
           "9.9.9.9"
