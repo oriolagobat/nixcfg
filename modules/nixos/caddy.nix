@@ -26,9 +26,10 @@ in
     package = pkgs.caddy.withPlugins {
       plugins = [
         "github.com/caddy-dns/porkbun@v0.3.1"
+        "github.com/greenpau/caddy-security@v1.1.31"
       ];
 
-      hash = "sha256-YmKKk5sSOVtv3fwF3kLZtxGL8YpQmHLR59eOcFnhfUo=";
+      hash = "sha256-3OKm8u+qPxwePbLei4S8oQXfMiMbMWhwBllBiArF5Nw=";
     };
 
     virtualHosts = builtins.listToAttrs [
