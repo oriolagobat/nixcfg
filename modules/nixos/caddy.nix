@@ -1,27 +1,90 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
+
 let
+  tlsConfig = ''
+    tls {
+      dns porkbun {
+        api_key {env.PORKBUN_API_KEY}
+        api_secret_key {env.PORKBUN_API_SECRET_KEY}
+      }
+
+      resolvers 9.9.9.9 149.112.112.112
+    }
+  '';
+
   mkCaddyHost = subdomain: port: {
     name = "${subdomain}.home.agost.info";
     value.extraConfig = ''
-      tls {
-        dns porkbun {
-          api_key {env.PORKBUN_API_KEY}
-          api_secret_key {env.PORKBUN_API_SECRET_KEY}
-        }
-
-        resolvers  9.9.9.9 149.112.112.112
-      }
+      ${tlsConfig}
 
       reverse_proxy 127.0.0.1:${toString port}
+    '';
+  };
+
+  mkProtectedCaddyHost = subdomain: port: {
+    name = "${subdomain}.home.agost.info";
+    value.extraConfig = ''
+      ${tlsConfig}
+
+      route /caddy-security/* {
+        authenticate with myportal
+      }
+
+      @tailscale remote_ip 100.64.0.0/10
+
+      route {
+        handle @tailscale {
+          reverse_proxy 127.0.0.1:${toString port}
+        }
+
+        handle {
+          authorize with mypolicy
+          reverse_proxy 127.0.0.1:${toString port}
+        }
+      }
     '';
   };
 in
 {
   services.caddy = {
+    enable = true;
+
     globalConfig = ''
       debug
+
+      order authenticate before respond
+      order authorize before reverse_proxy
+
+      security {
+        oauth identity provider generic {
+          delay_start 3
+          realm generic
+          driver generic
+          client_id {env.POCKET_ID_CLIENT_ID}
+          client_secret {env.POCKET_ID_CLIENT_SECRET}
+          scopes openid email profile
+          base_auth_url https://auth.home.agost.info
+          metadata_url https://auth.home.agost.info/.well-known/openid-configuration
+        }
+
+        authentication portal myportal {
+          crypto default token lifetime 3600
+          enable identity provider generic
+          cookie insecure off
+
+          transform user {
+            match realm generic
+            action add role user
+          }
+        }
+
+        authorization policy mypolicy {
+          set auth url /caddy-security/oauth2/generic
+          allow roles user
+          inject headers with claims
+        }
+      }
     '';
-    enable = true;
 
     package = pkgs.caddy.withPlugins {
       plugins = [
@@ -36,7 +99,8 @@ in
       (mkCaddyHost "auth" 1411)
       (mkCaddyHost "jelly" 8096)
       (mkCaddyHost "seer" 5055)
-      (mkCaddyHost "adguard" 3000)
+
+      (mkProtectedCaddyHost "adguard" 3000)
     ];
   };
 

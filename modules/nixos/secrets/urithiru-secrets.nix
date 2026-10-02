@@ -20,10 +20,15 @@
     secrets.porkbunApiKey = {};
     secrets.porkbunApiSecretKey = {};
     secrets.pocketIdEncryptionKey = {};
+    secrets.pocketIdCaddyClientId = {};
+    secrets.pocketIdCaddyClientSecret = {};
 
     templates."caddy-porkbun.env".content = ''
       PORKBUN_API_KEY=${config.sops.placeholder.porkbunApiKey}
       PORKBUN_API_SECRET_KEY=${config.sops.placeholder.porkbunApiSecretKey}
+
+      POCKET_ID_CLIENT_ID=${config.sops.placeholder.pocketIdCaddyClientId}
+      POCKET_ID_CLIENT_SECRET=${config.sops.placeholder.pocketIdCaddyClientSecret}
     '';
   };
 }

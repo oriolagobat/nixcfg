@@ -17,12 +17,6 @@ in
       user_rules = [
           "@@||home.agost.info^"  # Ignore Hagezi DNS Rebind Protection for my home domain
       ];
-      users = [
-        {
-          name = "admin";
-          password = "$2y$10$64ptzJNAMJil/ktse1x3meyuN4fxztarmVlgkI/8nLBLzSvgcjchK";
-        }
-      ];
 
       clients = {
         persistent = [
