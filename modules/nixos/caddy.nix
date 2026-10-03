@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 let
   tlsConfig = ''
     tls {
@@ -8,7 +7,8 @@ let
         api_secret_key {env.PORKBUN_API_SECRET_KEY}
       }
 
-      resolvers 9.9.9.9 149.112.112.112
+      propagation_delay 30s
+      propagation_timeout 10m
     }
   '';
 
@@ -98,9 +98,13 @@ in
     virtualHosts = builtins.listToAttrs [
       (mkCaddyHost "auth" 1411)
       (mkCaddyHost "jelly" 8096)
-      (mkCaddyHost "seer" 5055)
 
       (mkProtectedCaddyHost "adguard" 3000)
+      (mkProtectedCaddyHost "radarr" 7878)
+      (mkProtectedCaddyHost "sonarr" 8989)
+      (mkProtectedCaddyHost "bazarr" 6767)
+      (mkProtectedCaddyHost "prowlarr" 9696)
+      (mkProtectedCaddyHost "seer" 5055)
     ];
   };
 

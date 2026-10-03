@@ -15,7 +15,9 @@ in
 
     settings = {
       user_rules = [
-          "@@||home.agost.info^"  # Ignore Hagezi DNS Rebind Protection for my home domain
+        "@@||home.agost.info^"  # Ignore Hagezi DNS Rebind Protection for my home domain
+        "||home.agost.info^$dnstype=A|AAAA,dnsrewrite=100.98.245.53,client=100.64.0.0/10|fd7a:115c:a1e0::/48"
+        "||home.agost.info^$dnstype=A|AAAA,dnsrewrite=192.168.1.166,client=~100.64.0.0/10|~fd7a:115c:a1e0::/48"
       ];
 
       clients = {
@@ -64,13 +66,7 @@ in
         filtering_enabled = true;
         parental_enabled = false;
         safe_search.enabled = false;
-        rewrites = [
-          {
-            domain = "*.home.agost.info";
-            answer = "192.168.1.166";
-            enabled = true;
-          }
-        ];
+
       };
 
       filters = [
