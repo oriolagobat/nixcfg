@@ -10,13 +10,9 @@
   "openvpn-connect"
   "pycharm"
   "firefox"
-  # "autofirma"
   "intellij-idea"
   "prismlauncher"
   "webstorm"
-  # "google-chrome"
   "virtualbox"
-
-
-  "tableplus" # Database viewer, remove later
+  "jitpass/tap/jitpass"
 ]
