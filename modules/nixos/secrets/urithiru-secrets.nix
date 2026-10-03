@@ -18,6 +18,10 @@
 
     secrets.tailscaleKey = {};
     secrets.porkbunApiKey = {};
+    secrets.homepageSeerrKey = {};
+    secrets.homepageRadarrKey = {};
+    secrets.homepageSonarrKey = {};
+    secrets.homepageJellyfinKey = {};
     secrets.porkbunApiSecretKey = {};
     secrets.pocketIdEncryptionKey = {};
     secrets.pocketIdCaddyClientId = {};
@@ -29,6 +33,13 @@
 
       POCKET_ID_CLIENT_ID=${config.sops.placeholder.pocketIdCaddyClientId}
       POCKET_ID_CLIENT_SECRET=${config.sops.placeholder.pocketIdCaddyClientSecret}
+    '';
+    
+    templates."homepage.env".content = ''
+      HOMEPAGE_VAR_JELLYFIN_KEY=${config.sops.placeholder.homepageJellyfinKey}
+      HOMEPAGE_VAR_SEERR_KEY=${config.sops.placeholder.homepageSeerrKey}
+      HOMEPAGE_VAR_SONARR_KEY=${config.sops.placeholder.homepageSonarrKey}
+      HOMEPAGE_VAR_RADARR_KEY=${config.sops.placeholder.homepageRadarrKey}
     '';
   };
 }

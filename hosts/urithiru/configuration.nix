@@ -5,6 +5,7 @@
     ../../home/nixos.nix
     ./hardware-configuration.nix
     ../../modules/nixos/ssh.nix
+    ../../modules/nixos/dash.nix
     ../../modules/nixos/base.nix
     ../../modules/nixos/caddy.nix
     ../../modules/nixos/users.nix

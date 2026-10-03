@@ -99,12 +99,13 @@ in
       (mkCaddyHost "auth" 1411)
       (mkCaddyHost "jelly" 8096)
 
-      (mkProtectedCaddyHost "adguard" 3000)
-      (mkProtectedCaddyHost "radarr" 7878)
+      (mkProtectedCaddyHost "dash" 8082)
+      (mkProtectedCaddyHost "seer" 5055)
       (mkProtectedCaddyHost "sonarr" 8989)
       (mkProtectedCaddyHost "bazarr" 6767)
+      (mkProtectedCaddyHost "radarr" 7878)
+      (mkProtectedCaddyHost "adguard" 3000)
       (mkProtectedCaddyHost "prowlarr" 9696)
-      (mkProtectedCaddyHost "seer" 5055)
     ];
   };
 
