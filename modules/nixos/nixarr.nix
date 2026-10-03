@@ -8,6 +8,7 @@
   services.transmission.settings = {
     rpc-host-whitelist = lib.strings.concatStringsSep "," [
       "transmission.agost.info"
+      "downloads.home.agost.info"
       "127.0.0.1"
       "localhost"
     ];

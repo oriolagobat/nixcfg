@@ -100,6 +100,7 @@ in
       (mkCaddyHost "jelly" 8096)
 
       (mkProtectedCaddyHost "dash" 8082)
+      (mkProtectedCaddyHost "downloads" 9091)
       (mkProtectedCaddyHost "seer" 5055)
       (mkProtectedCaddyHost "sonarr" 8989)
       (mkProtectedCaddyHost "bazarr" 6767)
