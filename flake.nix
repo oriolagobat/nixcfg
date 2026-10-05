@@ -24,6 +24,7 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         nixarr.url = "github:nix-media-server/nixarr";
+        tokendrain.url = "github:FerranAD/tokendrain";
     };
 
     outputs = {
@@ -36,17 +37,18 @@
         nixvim,
         sops-nix,
         nixarr,
+        tokendrain,
     }: 
     let 
         user = "oriolagobat";
 
-        mkNixosHost = { nixpkgsInput ? nixpkgs, sops-nix, hostName, system, extraModules ? [ ] }:
+        mkNixosHost = { nixpkgsInput ? nixpkgs, sops-nix, hostName, system, tokendrain, extraModules ? [ ] }:
             nixpkgsInput.lib.nixosSystem {
                 inherit system;
                 modules = [
                 ./hosts/${hostName}/configuration.nix
                 ] ++ extraModules;
-                specialArgs = { inherit home-manager nixvim sops-nix user hostName nixarr; };
+                specialArgs = { inherit home-manager nixvim sops-nix user hostName nixarr tokendrain; };
             };
     in
     {
@@ -85,6 +87,7 @@
 
             urithiru = mkNixosHost {
                 inherit sops-nix;
+                inherit tokendrain;
                 nixpkgsInput = nixpkgs-stable;
                 hostName = "urithiru";
                 system = "x86_64-linux";

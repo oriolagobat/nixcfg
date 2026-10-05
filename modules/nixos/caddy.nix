@@ -107,6 +107,7 @@ in
       (mkProtectedCaddyHost "radarr" 7878)
       (mkProtectedCaddyHost "adguard" 3000)
       (mkProtectedCaddyHost "prowlarr" 9696)
+      (mkProtectedCaddyHost "tokendrain" 8742)
     ];
   };
 

@@ -13,6 +13,7 @@
     ../../modules/nixos/adguard.nix
     ../../modules/nixos/tailscale.nix
     ../../modules/nixos/pocket-id.nix
+    # ../../modules/nixos/tokendrain.nix
     ../../modules/nixos/boot/urithiru-boot.nix
     ../../modules/nixos/swap/urithiru-swap.nix
     ../../modules/nixos/secrets/urithiru-secrets.nix
