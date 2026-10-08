@@ -92,7 +92,7 @@ in
         "github.com/greenpau/caddy-security@v1.1.31"
       ];
 
-      hash = "sha256-3OKm8u+qPxwePbLei4S8oQXfMiMbMWhwBllBiArF5Nw=";
+      hash = "sha256-UV92Viu8WE8mb11Ocos5no+sXoUPPpTOhfK0mdZXCw4=";
     };
 
     virtualHosts = builtins.listToAttrs [
