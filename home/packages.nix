@@ -4,6 +4,7 @@
         packages = with pkgs; [
             sl
             nixd
+            nodejs
         ];
     };
 }
